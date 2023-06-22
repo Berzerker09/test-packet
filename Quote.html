@@ -613,9 +613,9 @@ function sendMail() {
 let head2 = "Quote refferal for " + String(name1)
 let body2 = "Email: " + String(email1) + "	\n" + "Name: " + String(name1) + "	\n" + "Phone: " + String(phone1) + "	\n" + "Street: " + String(street1) + "	\n" + "City: " + String(city1) + "  base estimate: " + baseEst
 	
-	localStorage.setItem("txtValue1", body2);
 	
 	justSendIt(head2, body2)
+	window.open("https://berzerker09.github.io/test-packet/QuoteD.html","_self")
 }
 
 function justSendIt(header1, bod) {
@@ -627,9 +627,7 @@ Email.send({
     From : "trwindowpros@gmail.com",
     Subject : header1,
     Body : bod
-}).then(
-  message => alert(message)
-  )
+})
 }
 
 function setCookie(cname, cvalue) {
